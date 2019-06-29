@@ -1,5 +1,13 @@
 let botao = document.getElementById('lutar')
 
+const pontosGit = [
+    { repositorioPublico: 20 },
+    { seguidores: 20 },
+    { seguindo: 20 },
+    { estrelasPorRepositorio: 20 },
+    { gists: 20 }
+  ]
+
 botao.addEventListener('click', function () {
     let input1 = document.getElementById('user1').value;
     let input2 = document.getElementById('user2').value;
