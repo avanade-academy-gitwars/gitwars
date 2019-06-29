@@ -2,10 +2,10 @@
 function buscarUsuarioGit(usuarioGit) {
    let dados = fetch('https://api.github.com/users/' + usuarioGit)
       .then(function (response) {
-         return response.text();
+         return response.json();
       })
-      .then(function (text) {
-         console.log('Request successful', text);
+      .then(function (usuario) {
+         return usuario;
       })
       .catch(function (error) {
          log('Request failed', error)
@@ -14,4 +14,15 @@ function buscarUsuarioGit(usuarioGit) {
    return dados;
 }
 
-console.log(buscarUsuarioGit("ernaneaugusto"));
+
+let usuario1 = buscarUsuarioGit("ernaneaugusto")
+   .then(usuario => {
+      return usuario;
+   })
+   .catch(err => console.log(err))
+
+let usuario2 = buscarUsuarioGit("camilaIT")
+   .then(usuario => {
+      return usuario;
+   })
+   .catch(err => console.log(err))
