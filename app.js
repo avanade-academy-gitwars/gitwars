@@ -2,10 +2,10 @@ let botao = document.getElementById('lutar')
 
 const pontosGit = [
     { repositorioPublico: 20 },
-    { seguidores: 20 },
-    { seguindo: 20 },
-    { estrelasPorRepositorio: 20 },
-    { gists: 20 }
+    { seguidores: 10 },
+    { seguindo: 5 },
+    { estrelasPorRepositorio: 10 },
+    { gists: 5 }
   ]
 
 botao.addEventListener('click', function () {
