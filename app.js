@@ -1,3 +1,8 @@
+let input1 = document.querySelector('input#user1');
+let input2 = document.querySelector('input#user2');
+
+
+
 
 function buscarUsuarioGit(usuarioGit) {
    let dados = fetch('https://api.github.com/users/' + usuarioGit)
