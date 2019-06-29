@@ -64,7 +64,7 @@ body{
     border-color: yellow;
 }
 
-.btnFight:hover{
+.lutar:hover{
     background-color: red;
     color: yellow;
     border-color: white;
