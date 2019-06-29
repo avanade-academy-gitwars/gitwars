@@ -11,6 +11,12 @@ const pontosGit = [
 botao.addEventListener('click', function () {
     let input1 = document.getElementById('user1').value;
     let input2 = document.getElementById('user2').value;
+    let divOne = document.getElementById('one');
+    let divTwo = document.getElementById('two');
+   divOne.classList.add("hidden");
+   divTwo.classList.add("show");
+   
+
     
     let usuario1 = buscarUsuarioGit(input1)
         .then(usuario => {

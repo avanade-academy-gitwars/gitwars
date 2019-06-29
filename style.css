@@ -99,9 +99,11 @@ body{
 }
 
 
-.two-hidden{
-    display: none;
+.two.show{
+    display: block;
 }
 
-
+.two{
+    display: none;
+}
 
