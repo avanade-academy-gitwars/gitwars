@@ -94,3 +94,14 @@ body{
     margin: 0 auto;
 }
 
+.one.hidden{
+    display: none;
+}
+
+
+.two-hidden{
+    display: none;
+}
+
+
+
