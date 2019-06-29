@@ -1,0 +1,71 @@
+body{
+    background-image: url('https://i.pinimg.com/originals/61/9f/bc/619fbc52e2d8ab21dff5c90562bbafa5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo{
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+.wars{
+    color: red;
+    font-weight: bold;
+}
+
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.username{
+    border-radius: 30px;
+    width: 350px;
+}
+
+.username::placeholder{
+    text-align: center;
+}
+
+.localname{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+
+.vs{
+    width: 150px;
+    height: 150px;
+    top: 25%;
+    position: relative;
+}
+
+.localvs{
+    display: flex;
+    justify-content: center;
+}
+
+.localbtn{
+   display: flex;
+   justify-content: center;
+   padding-top: 10%;
+}
+
+.btnFight{
+    width: 260px;
+    height: 50px;
+    background-color: red;
+    font-size: 1.5em;
+    border-color: yellow;
+}
+
+.btnFight:hover{
+    background-color: red;
+    color: yellow;
+    border-color: white;
+}
