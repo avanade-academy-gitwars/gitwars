@@ -15,9 +15,9 @@ botao.addEventListener('click', function () {
     let divTwo = document.getElementById('two');
    divOne.classList.add("hidden");
    divTwo.classList.add("show");
-   
 
-    
+
+
     let usuario1 = buscarUsuarioGit(input1)
         .then(usuario => {
             return usuario;
