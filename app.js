@@ -42,8 +42,7 @@ botao.addEventListener('click', function () {
     let gistsPtsUsuario2 = document.getElementById('pts2-gists-pub');
     let totalPtsUsuario2 = document.getElementById('pts2-total-pub');
 
-    // let usuario1 = buscarUsuarioGit(input1)
-    buscarUsuarioGit(input1)
+    let usuario1 = buscarUsuarioGit(input1)
         .then(usuario => {
             let pontosRepo = usuario.public_repos * pontosGit[0].repositorioPublico;
             let pontosSeguidores = usuario.followers * pontosGit[1].seguidores;
@@ -66,13 +65,10 @@ botao.addEventListener('click', function () {
             gistsPtsUsuario1.innerHTML = pontosGists;
 
             totalPtsUsuario1.innerHTML = total;
-
-            return usuario;
         })
         .catch(err => console.log(err));
 
-    // let usuario2 = buscarUsuarioGit(input2)
-    buscarUsuarioGit(input2)
+    let usuario2 = buscarUsuarioGit(input2)
         .then(usuario => {
             let pontosRepo = usuario.public_repos * pontosGit[0].repositorioPublico;
             let pontosSeguidores = usuario.followers * pontosGit[1].seguidores;
@@ -95,10 +91,13 @@ botao.addEventListener('click', function () {
             gistsPtsUsuario2.innerHTML = pontosGists;
 
             totalPtsUsuario2.innerHTML = total;
-
-            return usuario;
         })
         .catch(err => console.log(err));
+
+        Promise.all([usuario1, usuario2]).then(() => {
+            console.log(totalPtsUsuario1.innerHTML)
+            console.log(totalPtsUsuario2.innerHTML)
+        });
 })
 
 function buscarUsuarioGit(usuarioGit) {
@@ -110,7 +109,7 @@ function buscarUsuarioGit(usuarioGit) {
             return usuario;
         })
         .catch(function (error) {
-            log('Request failed', error)
+            console.log('Request failed', error)
         });
 
     return dados;
